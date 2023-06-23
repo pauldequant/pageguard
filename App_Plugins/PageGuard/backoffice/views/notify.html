@@ -1,5 +1,5 @@
 ﻿<div ng-controller="pageguard.notify.controller as vm" class="pageguard">
-    <localize key="pageGuardNotify_intro" tokens="[{{this.latestUsername}},{{this.latestDateTimeRecord}},{{this.latestDateRecord}}]" watch-tokens="true">
+    <localize key="pageGuardNotify_intro" tokens="[this.latestUsername,this.latestDateTimeRecord,this.latestDateRecord]" watch-tokens="true">
         <p>The user '<strong>{{this.latestUsername}}</strong>' is currently updating this page. This page was checked out at <strong>{{this.latestDateTimeRecord | date: 'HH:mm'}}</strong> on <strong>{{this.latestDateTimeRecord | date: 'dd/MM/yyyy'}}</strong>.</p>
         <hr />
         <p>Clicking on <span class="badge badge-success">Notify</span> will automatically email '<em>{{this.latestUsername}}</em>' asking them to release this page.</p>
