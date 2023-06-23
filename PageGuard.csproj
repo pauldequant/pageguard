@@ -12,6 +12,7 @@
         <Authors>pauldequant,jonroberts24</Authors>
         <PackageReadmeFile>readme.md</PackageReadmeFile>
         <PackageProjectUrl>https://github.com/pauldequant/pageguard</PackageProjectUrl>
+        <Version>1.0.1</Version>
     </PropertyGroup>
 
     <ItemGroup>
@@ -35,9 +36,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Content Remove="App_Plugins\PageGuard\backoffice\js\pageguard.status.controller.js" />
       <Content Remove="App_Plugins\PageGuard\backoffice\views\pageguard.html" />
-      <Content Remove="App_Plugins\PageGuard\backoffice\views\pagestatus.html" />
     </ItemGroup>
 
     <ItemGroup>
@@ -48,13 +47,14 @@
       <None Remove="App_Plugins\PageGuard\backoffice\js\pageguard.dashboard.controller.js" />
       <None Remove="App_Plugins\PageGuard\backoffice\js\pageguard.notify.controller.js" />
       <None Remove="App_Plugins\PageGuard\backoffice\js\pageguard.override.controller.js" />
+      <None Remove="App_Plugins\PageGuard\backoffice\js\pageguard.status.controller.js" />
       <None Remove="App_Plugins\PageGuard\backoffice\resources\pageguard.resource.js" />
       <None Remove="App_Plugins\PageGuard\backoffice\views\checkin.html" />
       <None Remove="App_Plugins\PageGuard\backoffice\views\checkout.html" />
       <None Remove="App_Plugins\PageGuard\backoffice\views\dashboard.html" />
       <None Remove="App_Plugins\PageGuard\backoffice\views\notify.html" />
       <None Remove="App_Plugins\PageGuard\backoffice\views\override.html" />
-      <None Remove="App_Plugins\PageGuard\backoffice\views\pageguard.html" />
+      <None Remove="App_Plugins\PageGuard\backoffice\views\pagestatus.html" />
       <None Remove="App_Plugins\PageGuard\backoffice\views\pagehistory.html" />
       <None Remove="App_Plugins\PageGuard\Lang\da-DK.xml" />
       <None Remove="App_Plugins\PageGuard\Lang\de-DE.xml" />
