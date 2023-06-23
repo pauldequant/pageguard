@@ -5,10 +5,12 @@ VisualStudioVersion = 17.6.33801.468
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PageGuard", "PageGuard.csproj", "{E26813B5-DD90-4230-B614-193A9E60F720}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PageGuard.Site", "..\PageGuard.Site\PageGuard.Site.csproj", "{2C3AB495-0B61-4574-B564-188E3D752D02}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PageGuard.Site", "..\PageGuard.Site\PageGuard.Site.csproj", "{2C3AB495-0B61-4574-B564-188E3D752D02}"
 	ProjectSection(ProjectDependencies) = postProject
 		{E26813B5-DD90-4230-B614-193A9E60F720} = {E26813B5-DD90-4230-B614-193A9E60F720}
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PageGuard.NugetTest", "..\PageGuard.NugetTest\PageGuard.NugetTest.csproj", "{4EC9185F-4DC8-40D2-A2F0-00F8A97E46B0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -24,6 +26,10 @@ Global
 		{2C3AB495-0B61-4574-B564-188E3D752D02}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2C3AB495-0B61-4574-B564-188E3D752D02}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2C3AB495-0B61-4574-B564-188E3D752D02}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4EC9185F-4DC8-40D2-A2F0-00F8A97E46B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4EC9185F-4DC8-40D2-A2F0-00F8A97E46B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4EC9185F-4DC8-40D2-A2F0-00F8A97E46B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4EC9185F-4DC8-40D2-A2F0-00F8A97E46B0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

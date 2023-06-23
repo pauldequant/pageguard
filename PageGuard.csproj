@@ -11,6 +11,7 @@
         <RootNamespace>PageGuard</RootNamespace>
         <Authors>pauldequant,jonroberts24</Authors>
         <PackageReadmeFile>readme.md</PackageReadmeFile>
+        <PackageProjectUrl>https://github.com/pauldequant/pageguard</PackageProjectUrl>
     </PropertyGroup>
 
     <ItemGroup>

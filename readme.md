@@ -5,3 +5,7 @@ Page Guard allows users to easily check out specific pages for exclusive editing
 ## Supported Versions
 
 - Umbraco 11.4+
+
+## How to Install
+
+To add the check in / check out functionality to your page, you will need to add the Data Type Page Guard: Status to the required Document Types in the Settings section of the Umbraco CMS backoffice.
