@@ -1,0 +1,42 @@
+﻿<div ng-controller="pageguard.override.controller as vm" class="pageguard">
+    <div class="alert alert-info">
+        <localize key="pageGuardOverride_alert">Overriding the checkout status of this page will remove the page block and allow you/other users to access the current updates made to this page.</localize>
+    </div>
+    <localize key="pageGuardOverride_intro" tokens="[this.latestUsername,this.latestDateTimeRecord,this.latestDateRecord,this.lastPageUpdatedDate,this.lastPageUpdatedTime]" watch-tokens="true">
+        <p>The user '<strong>{{this.latestUsername}}</strong>' is currently updating this page.</p>
+        <p>This page was checked out at <strong>{{this.latestDateTimeRecord | date: 'HH:mm'}}</strong> on <strong>{{this.latestDateRecord | date: 'dd/MM/yyyy'}}</strong> and the last updates to this page were made on <strong>{{this.lastPageUpdatedDate | date: 'dd/MM/yyyy'}}</strong> at <strong>{{this.lastPageUpdatedDate | date: 'HH:mm'}}</strong>.</p>
+    </localize>
+    <h2><localize key="pageGuardOverride_historyTitle">Check-in | Check-out History - Last 5 updates</localize></h2>
+    <table class="table">
+        <thead>
+            <tr>
+                <td></td>
+                <td><strong><localize key="pageGuardOverride_colName">Name</localize></strong></td>
+                <td><strong><localize key="pageGuardOverride_colDateTime">Date Time</localize></strong></td>
+                <td><strong><localize key="pageGuardOverride_colStatus">Status</localize></strong></td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="x in this.list | limitTo:5 | orderBy: '-DateTimeRecord'">
+                <td class="icon-col">
+                    <div>
+                        <img class="umb-avatar umb-avatar--xs" ng-if="x.Avatar" ng-src="/media/{{x.Avatar}}" ng-srcset="{{imgSrcset}}" alt="User Avatar" />
+                        <div class="umb-avatar umb-avatar--xs umb-avatar--secondary" ng-if="!x.Avatar">
+                            <span class="initial">{{vm.getNameInitials(x.Username)}}</span>
+                        </div>
+                    </div>
+                </td>
+                <td><a href="mailto:{{x.UserEmail}}">{{x.Username}}</a></td>
+                <td>{{x.DateTimeRecord | date: 'dd/MM/yyyy HH:mm'}}</td>
+                <td>
+                    <div class="umb-badge umb-badge--gray umb-badge--xs" ng-show="x.Status == 1"><localize key="pageGuardOverride_badgeCheckOut">Page Checked Out</localize></div>
+                    <div class="umb-badge umb-badge--gray umb-badge--xs" ng-show="x.Status == 0"><localize key="pageGuardOverride_badgeCheckIn">Page Checked In</localize></div>
+                    <div class="umb-badge umb-badge--success umb-badge--xs" ng-show="x.Status == 2"><localize key="pageGuardOverride_badgeOverride">Page Override</localize></div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <hr />
+    <!--<p>If you want to preview this page whilst it's checked out, please click the '<strong>Preview Page</strong>' button below.</p>-->
+    <a href="/umbraco/preview/?id={{this.nodeId}}" target="_blank" class="btn btn-default"><span class="icon-tv large"></span><localize key="pageGuardOverride_btnPreviewPage">Preview Page</localize></a>
+</div>

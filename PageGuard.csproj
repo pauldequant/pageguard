@@ -1,0 +1,75 @@
+<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <TargetFramework>net7.0</TargetFramework>
+        <ContentTargetFolders>.</ContentTargetFolders>
+        <Product>PageGuard</Product>
+        <PackageId>PageGuard</PackageId>
+        <Title>PageGuard</Title>
+        <Description>Page Guard: An Umbraco package that implements a check in  / checkout system for page content.</Description>
+        <Product>...</Product>
+        <PackageTags>umbraco plugin package;umbraco-marketplace</PackageTags>
+        <RootNamespace>PageGuard</RootNamespace>
+        <Authors>pauldequant,jonroberts24</Authors>
+        <PackageReadmeFile>readme.md</PackageReadmeFile>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Umbraco.Cms.Web.Website" Version="11.4.1" />
+        <PackageReference Include="Umbraco.Cms.Web.BackOffice" Version="11.4.1" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <Content Include="App_Plugins\PageGuard\**\*.*">
+            <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+            <CopyToPublishDirectory>Always</CopyToPublishDirectory>
+        </Content>
+        <None Include="build\**\*.*">
+            <Pack>True</Pack>
+            <PackagePath>buildTransitive</PackagePath>
+        </None>
+    </ItemGroup>
+
+    <ItemGroup>
+      <Compile Remove="PropertyEditors\PageGuardStatusPropertyEditor.cs" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Content Remove="App_Plugins\PageGuard\backoffice\js\pageguard.status.controller.js" />
+      <Content Remove="App_Plugins\PageGuard\backoffice\views\pageguard.html" />
+      <Content Remove="App_Plugins\PageGuard\backoffice\views\pagestatus.html" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="App_Plugins\PageGuard\backoffice\css\pageguard.css" />
+      <None Remove="App_Plugins\PageGuard\backoffice\js\pageguard.checkin.controller.js" />
+      <None Remove="App_Plugins\PageGuard\backoffice\js\pageguard.checkout.controller.js" />
+      <None Remove="App_Plugins\PageGuard\backoffice\js\pageguard.controller.js" />
+      <None Remove="App_Plugins\PageGuard\backoffice\js\pageguard.dashboard.controller.js" />
+      <None Remove="App_Plugins\PageGuard\backoffice\js\pageguard.notify.controller.js" />
+      <None Remove="App_Plugins\PageGuard\backoffice\js\pageguard.override.controller.js" />
+      <None Remove="App_Plugins\PageGuard\backoffice\resources\pageguard.resource.js" />
+      <None Remove="App_Plugins\PageGuard\backoffice\views\checkin.html" />
+      <None Remove="App_Plugins\PageGuard\backoffice\views\checkout.html" />
+      <None Remove="App_Plugins\PageGuard\backoffice\views\dashboard.html" />
+      <None Remove="App_Plugins\PageGuard\backoffice\views\notify.html" />
+      <None Remove="App_Plugins\PageGuard\backoffice\views\override.html" />
+      <None Remove="App_Plugins\PageGuard\backoffice\views\pageguard.html" />
+      <None Remove="App_Plugins\PageGuard\backoffice\views\pagehistory.html" />
+      <None Remove="App_Plugins\PageGuard\Lang\da-DK.xml" />
+      <None Remove="App_Plugins\PageGuard\Lang\de-DE.xml" />
+      <None Remove="App_Plugins\PageGuard\Lang\en-US.xml" />
+      <None Remove="App_Plugins\PageGuard\Lang\fr-FR.xml" />
+      <None Remove="App_Plugins\PageGuard\Lang\nl-NL.xml" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="PropertyEditors\" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Update="readme.md">
+        <Pack>True</Pack>
+        <PackagePath>\</PackagePath>
+      </None>
+    </ItemGroup>
+</Project>

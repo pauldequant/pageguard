@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<language>
+  <area alias="dashboardTabs">
+    <key alias="pageGuardDashboard">Seitenschutz</key>
+  </area>
+  <area alias="pageGuardDashboard">
+    <key alias="myCheckoutsTitle">Meine Ausleihen</key>
+    <key alias="noPagesCheckedOutByMe">Du hast derzeit keine Seiten ausgeliehen</key>
+    <key alias="allCheckoutsTitle">Alle Ausleihen durch andere Benutzer</key>
+    <key alias="noPagesCheckedOutByOthers">Es sind derzeit keine Seiten von anderen Benutzern ausgeliehen</key>
+    <key alias="colPage">Seite</key>
+    <key alias="colCheckoutDate">Ausleihdatum</key>
+    <key alias="colActions">Aktionen</key>
+    <key alias="btnCheckInPage">Seite zurückgeben</key>
+    <key alias="colCheckedOutFor">Ausgeliehen für</key>
+    <key alias="colCheckedOutBy">Ausgeliehen von</key>
+    <key alias="btnUnlockPage">Seite entsperren</key>
+    <key alias="successmsg">Die Seite wurde erfolgreich entsperrt</key>
+  </area>
+  <area alias="pageGuardCheckIn">
+    <key alias="intro">Wenn du diese Seite zurückgeben möchtest, klicke auf den unten stehenden Button.</key>
+    <key alias="btnCheckIn">Seite zurückgeben</key>
+    <key alias="previewPageText"><![CDATA[Wenn du diese Seite vorab anzeigen möchtest, klicke auf den Button '<strong>Seite anzeigen</strong>' unten.]]></key>
+    <key alias="btnPreviewPage">Seite anzeigen</key>
+    <key alias="successmsg">Deine Seite wurde erfolgreich zurückgegeben</key>
+  </area>
+  <area alias="pageGuardCheckOut">
+    <key alias="intro">Wenn du Änderungen an dieser Seite vornehmen möchtest, musst du sie zuerst ausleihen.</key>
+    <key alias="alert">Durch das Ausleihen der Seite wird der Zugriff für alle anderen Benutzer eingeschränkt.</key>
+    <key alias="previewPageText"><![CDATA[Wenn du diese Seite vorab anzeigen möchtest, ohne sie auszuleihen, klicke auf den Button '<strong>Seite anzeigen</strong>' unten.]]></key>
+    <key alias="btnPreviewPage">Seite anzeigen</key>
+  </area>
+  <area alias="pageGuardNotify">
+    <key alias="intro">
+      <![CDATA[
+      <p>
+        Der Benutzer '<strong>%0%</strong>' aktualisiert derzeit diese Seite. Diese Seite wurde am <strong>%2%</strong> um <strong>%1%</strong> ausgeliehen.
+      </p>
+      <hr />
+      <p>
+        Wenn du auf <span class="badge badge-success">Benachrichtigen</span> klickst, wird automatisch eine E-Mail an '<em>%0%</em>' gesendet, um ihn/sie darum zu bitten, diese Seite freizugeben.
+      </p>
+      <p>
+        Wenn du keine Antwort von '<em>%0%</em>' erhältst, versuche dich an einen Administrator zu wenden.
+      </p>
+      <hr />
+      <p>
+        <strong>Klicke auf den Namen eines Administrators unten, um ihn zu kontaktieren.</strong>
+      </p>
+      ]]>
+    </key>
+    <key alias="colName">Name</key>
+    <key alias="colEmail">E-Mail</key>
+    <key alias="btnPreviewPage">Seite anzeigen</key>
+  </area>
+  <area alias="pageGuardOverride">
+    <key alias="alert">Durch das Aufheben des Ausleihstatus dieser Seite wird der Seitenblock entfernt und ermöglicht den Zugriff auf die aktuellen Updates dieser Seite durch dich/andere Benutzer.</key>
+    <key alias="intro">
+      <![CDATA[
+      <p>
+        Der Benutzer '<strong>%0%</strong>' aktualisiert derzeit diese Seite.
+      </p>
+      <p>
+        Diese Seite wurde am <strong>%2%</strong> um <strong>%1%</strong> ausgeliehen, und die letzten Updates wurden am <strong>%3%</strong> um <strong>%4%</strong> vorgenommen.
+      </p>
+      ]]>
+    </key>
+    <key alias="historyTitle">Check-in | Check-out Verlauf - Letzte 5 Updates</key>
+    <key alias="colName">Name</key>
+    <key alias="colDateTime">Datum/Uhrzeit</key>
+    <key alias="colStatus">Status</key>
+    <key alias="badge"><![CDATA[<div class="umb-badge umb-badge--gray umb-badge--xs" ng-show="x.Status == 1">Seite ausgeliehen</div><div class="umb-badge umb-badge--gray umb-badge--xs" ng-show="x.Status == 0">Seite zurückgegeben</div><div class="umb-badge umb-badge--success umb-badge--xs" ng-show="x.Status == 2">Seitenüberschreibung</div>]]></key>
+    <key alias="btnPreviewPage">Seite anzeigen</key>
+    <key alias="badgeCheckOut">Seite ausgeliehen</key>
+    <key alias="badgeCheckIn">Seite zurückgegeben</key>
+    <key alias="badgeOverride">Seitenüberschreibung</key>
+  </area>
+  <area alias="pageGuardPageHistory">
+    <key alias="title">Check-in | Check-out Verlauf - Letzte 5 Updates</key>
+    <key alias="colName">Name</key>
+    <key alias="colDateTime">Datum/Uhrzeit</key>
+    <key alias="colStatus">Status</key>
+    <key alias="badgeCheckOut">Seite ausgeliehen</key>
+    <key alias="badgeCheckIn">Seite zurückgegeben</key>
+    <key alias="badgeOverride">Seitenüberschreibung</key>
+  </area>
+  <area alias="pageGuardPageStatus">
+    <key alias="intro">Du hast diese Seite derzeit ausgeliehen. Vergiss nicht, sie zurückzugeben, wenn du fertig bist.</key>
+    <key alias="btnCheckInPage">Seite zurückgeben</key>
+    <key alias="successmsg">Deine Seite wurde erfolgreich zurückgegeben</key>
+  </area>
+  <area alias="pageGuardJsController">
+    <key alias="displayOverrideTitle">Seite ist gesperrt</key>
+    <key alias="displayOverrideDescription">Diese Seite ist derzeit ausgeliehen. Als Administrator kannst du diese Sperre aufheben.</key>
+    <key alias="displayOverrideSubmitButton">Seite entsperren</key>
+    <key alias="displayOverrideExitButton">Beenden</key>
+    <key alias="displayCheckoutTitle">Ausleihen</key>
+    <key alias="displayCheckoutDescription">Diese Seite zum Bearbeiten sperren</key>
+    <key alias="displayCheckoutSubmitButton">Ausleihen</key>
+    <key alias="displayCheckoutExitButton">Beenden</key>
+    <key alias="displayNotifyTitle">Seite ist gesperrt</key>
+    <key alias="displayNotifyDescription">Diese Seite wird derzeit verwendet</key>
+    <key alias="displayNotifySubmitButton">Benachrichtigen</key>
+    <key alias="displayNotifyExitButton">Abbrechen</key>
+    <key alias="performNotifySuccess">Deine Benachrichtigungs-E-Mail wurde erfolgreich gesendet</key>
+    <key alias="performNotifyError">Deine Benachrichtigungs-E-Mail konnte nicht gesendet werden</key>
+  </area>
+</language>

@@ -1,0 +1,73 @@
+﻿<div ng-controller="pageguard.dashboard.controller as vm" class="pageguard">
+    <div class="umb-box">
+        <div class="umb-box-header ng-scope">
+            <div class="umb-box-header-title">
+                <localize key="pageGuardDashboard_myCheckoutsTitle">My checkouts</localize>
+            </div>
+        </div>
+        <div class="block-form umb-box-content">
+            <div class="umb-empty-state" ng-if="!this.list.length"><localize key="pageGuardDashboard_noPagesCheckedOutByMe">You do not have any pages currently checked out</localize></div>
+            <div class="umb-table" ng-if="this.list.length">
+                <div class="umb-table-head">
+                    <div class="umb-table-row">
+                        <div class="umb-table-cell"></div>
+                        <div class="umb-table-cell umb-table__name"><localize key="pageGuardDashboard_colPage">Page</localize></div>
+                        <div class="umb-table-cell"><localize key="pageGuardDashboard_colCheckoutDate">Checkout date</localize></div>
+                        <div class="umb-table-cell"><localize key="pageGuardDashboard_colActions">Actions</localize></div>
+                    </div>
+                </div>
+                <div class="umb-table-body">
+                    <div class="umb-row-outer">
+                        <div class="umb-table-row" ng-repeat="x in this.list | orderBy: '-DateTimeRecord'">
+                            <div class="umb-table-cell">
+                                <i class="umb-table-body__icon icon-document publish"></i>
+                            </div>
+                            <div class="umb-table-cell umb-table__name"><a href="/umbraco/#/content/content/edit/{{x.NodeId}}">{{x.Text}}</a></div>
+                            <div class="umb-table-cell">{{x.DateTimeRecord | date: 'dd MMMM yyyy HH:mm'}}</div>
+                            <div class="umb-table-cell"><button class="btn btn-primary" ng-click="this.PerformCheckin(x)"><localize key="pageGuardDashboard_btnCheckInPage">Check in page</localize></button></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="umb-box">
+        <div class="umb-box-header ng-scope">
+            <div class="umb-box-header-title">
+                <localize key="pageGuardDashboard_allCheckoutsTitle">All checkouts by other users</localize>
+            </div>
+        </div>
+        <div class="block-form umb-box-content">
+            <div class="umb-empty-state" ng-if="!this.everyone.length"><localize key="pageGuardDashboard_noPagesCheckedOutByOthers">There are no pages currently checked out by other users</localize></div>
+            <div class="umb-table" ng-if="this.everyone.length">
+                <div class="umb-table-head">
+                    <div class="umb-table-row">
+                        <div class="umb-table-cell"></div>
+                        <div class="umb-table-cell umb-table__name"><localize key="pageGuardDashboard_colPage">Page</localize></div>
+                        <div class="umb-table-cell"><localize key="pageGuardDashboard_colCheckoutDate">Checkout date</localize></div>
+                        <div class="umb-table-cell"><localize key="pageGuardDashboard_colCheckedOutFor">Checked out for</localize></div>
+                        <div class="umb-table-cell"><localize key="pageGuardDashboard_colCheckedOutBy">Checked out by</localize></div>
+                        <div class="umb-table-cell" ng-show="this.currentUserRole == 'admin'"><localize key="pageGuardDashboard_colActions">Actions</localize></div>
+                    </div>
+                </div>
+                <div class="umb-table-body">
+                    <div class="umb-row-outer">
+                        <div class="umb-table-row" ng-repeat="x in this.everyone | orderBy: '-DateTimeRecord'">
+                            <div class="umb-table-cell">
+                                <i class="umb-table-body__icon icon-document publish"></i>
+                            </div>
+                            <div class="umb-table-cell umb-table__name"><a href="/umbraco/#/content/content/edit/{{x.NodeId}}">{{x.Text}}</a></div>
+                            <div class="umb-table-cell">{{x.DateTimeRecord | date: 'dd MMMM yyyy HH:mm'}}</div>
+                            <div class="umb-table-cell">{{ this.DaysCheckedOut(vm.millisToUTCDate(x.DateTimeRecord)) }}</div>
+                            <div class="umb-table-cell">
+                                <a href="mailto:{{x.UserEmail}}">{{x.Username}}</a>
+                            </div>
+                            <div class="umb-table-cell" ng-show="this.currentUserRole == 'admin'"><button class="btn btn-primary" ng-click="this.PerformUnlock(x)"><localize key="pageGuardDashboard_btnUnlockPage">Unlock Page</localize></button></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

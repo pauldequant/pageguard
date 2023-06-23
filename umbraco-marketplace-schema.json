@@ -1,0 +1,48 @@
+{
+  "$schema": "https://marketplace.umbraco.com/umbraco-marketplace-schema.json",
+  "AddOnPackagesRequiredForUmbracoCloud": [],
+  "AlternatePackageNames": [],
+  "AuthorDetails": {
+    "Name": "Paul de Quant, Jon Roberts",
+    "Description": "",
+    "Url": "",
+    "ImageUrl": "",
+    "Contributors": [
+      {
+        "Name": "",
+        "Url": ""
+      }
+    ],
+    "SyncContributorsFromRepository": "false"
+  },
+  "Category": "Editor Tools",
+  "Description": "Page Guard allows users to easily check out specific pages for exclusive editing rights. By checking out a page, you prevent others from making simultaneous changes, reducing the risk of content conflicts and data loss. Once you've made the necessary updates, simply check the page back in to make it available for others to edit.",
+  "DiscussionForumUrl": "",
+  "DocumentationUrl": "",
+  "LicenseTypes": [ "Free" ],
+  "IssueTrackerUrl": "",
+  "IsSubPackageOf": "",
+  "PackageType": "Package",
+  "PackagesByAuthor": [],
+  "RelatedPackages": [
+    {
+      "PackageId": "",
+      "Description": ""
+    }
+  ],
+  "Screenshots": [
+    {
+      "ImageUrl": "",
+      "Caption": ""
+    }
+  ],
+  "Tags": [],
+  "Title": "Page Guard",
+  "VersionSpecificPackageIds": [
+    {
+      "UmbracoMajorVersion": 11,
+      "PackageId": ""
+    }
+  ],
+  "VideoUrl": ""
+}

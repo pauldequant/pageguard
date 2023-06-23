@@ -1,0 +1,47 @@
+﻿{
+  "dashboards": [
+    {
+      "alias": "pageGuardDashboard",
+      "view": "~/App_Plugins/PageGuard/backoffice/views/dashboard.html",
+      "sections": [ "content" ],
+      "weight": -10
+    }
+  ],
+  "contentApps": [
+    {
+      "name": "Page Guard",
+      "alias": "pageGuardContentApp",
+      "weight": 50,
+      "icon": "icon-shield",
+      "view": "~/App_Plugins/PageGuard/backoffice/views/pagehistory.html",
+      "show": [ "+content/*" ]
+    }
+  ],
+  "propertyEditors": [
+    {
+      "alias": "PageGuardStatus",
+      "name": "Page Guard Status",
+      "icon": "icon-shield",
+      "group": "Security",
+      "isParameterEditor": false,
+      "editor": {
+        "view": "~/App_Plugins/PageGuard/backoffice/views/pagestatus.html",
+        "valueType": "JSON",
+        "hideLabel": true
+      }
+    }
+  ],
+  "javascript": [
+    "~/App_Plugins/PageGuard/backoffice/js/pageguard.controller.js",
+    "~/App_Plugins/PageGuard/backoffice/js/pageguard.notify.controller.js",
+    "~/App_Plugins/PageGuard/backoffice/js/pageguard.checkout.controller.js",
+    "~/App_Plugins/PageGuard/backoffice/js/pageguard.override.controller.js",
+    "~/App_Plugins/PageGuard/backoffice/js/pageguard.checkin.controller.js",
+    "~/App_Plugins/PageGuard/backoffice/js/pageguard.dashboard.controller.js",
+    "~/App_Plugins/PageGuard/backoffice/resources/pageguard.resource.js",
+    "~/App_Plugins/PageGuard/backoffice/js/pageguard.status.controller.js"
+  ],
+  "css": [
+    "~/App_Plugins/PageGuard/backoffice/css/pageguard.css"
+  ]
+}

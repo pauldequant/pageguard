@@ -1,0 +1,27 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+    <PropertyGroup>
+        <PageGuardContentFilesPath>$(MSBuildThisFileDirectory)..\App_Plugins\PageGuard\**\*.*</PageGuardContentFilesPath>
+    </PropertyGroup>
+
+    <Target Name="CopyPageGuardAssets" BeforeTargets="Build">
+        <ItemGroup>
+            <PageGuardContentFiles Include="$(PageGuardContentFilesPath)" />
+        </ItemGroup>
+        <Message Text="Copying PageGuard files: $(PageGuardContentFilesPath) - #@(PageGuardContentFiles->Count()) files"  Importance="high" />
+        <Copy
+            SourceFiles="@(PageGuardContentFiles)"
+            DestinationFiles="@(PageGuardContentFiles->'$(MSBuildProjectDirectory)\App_Plugins\PageGuard\%(RecursiveDir)%(Filename)%(Extension)')"
+            SkipUnchangedFiles="true" />
+
+    </Target>
+
+    <Target Name="ClearPageGuardAssets" BeforeTargets="Clean">
+        <ItemGroup>
+            <PageGuardDir Include="$(MSBuildProjectDirectory)\App_Plugins\PageGuard\" />
+        </ItemGroup>
+        <Message Text="Clear old PageGuard data"  Importance="high" />
+        <RemoveDir Directories="@(PageGuardDir)"  />
+    </Target>
+
+</Project>

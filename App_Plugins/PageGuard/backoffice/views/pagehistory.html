@@ -1,0 +1,42 @@
+﻿<div ng-controller="pageguard.controller as vm" class="pageguard">
+
+    <h2><localize key="pageGuardPageHistory_title">Check-in | Check-out History - Last 5 updates</localize></h2>
+    <table class="table">
+        <thead>
+            <tr>
+                <td></td>
+                <td><strong><localize key="pageGuardPageHistory_colName">Name</localize></strong></td>
+                <td><strong><localize key="pageGuardPageHistory_colDateTime">Date Time</localize></strong></td>
+                <td><strong><localize key="pageGuardPageHistory_colStatus">Status</localize></strong></td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="x in this.list | limitTo:5 | orderBy: '-DateTimeRecord'">
+                <td class="icon-col">
+                    <div>
+                        <img class="umb-avatar umb-avatar--xs" ng-if="x.Avatar" ng-src="/media/{{x.Avatar}}" ng-srcset="{{imgSrcset}}" alt="User Avatar" />
+                        <div class="umb-avatar umb-avatar--xs umb-avatar--secondary" ng-if="!x.Avatar">
+                            <span class="initial">{{vm.getNameInitials(x.Username)}}</span>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <a href="mailto:{{x.UserEmail}}">{{x.Username}}</a>
+                </td>
+                <td><span ng-bind="x.DateTimeRecord | date: 'dd/MM/yyyy HH:mm'"></span></td>
+                <td>
+                    <div class="umb-badge umb-badge--gray umb-badge--xs" ng-show="x.Status == 1"><localize key="pageGuardPageHistory_badgeCheckOut">Page Checked Out</localize></div>
+                    <div class="umb-badge umb-badge--gray umb-badge--xs" ng-show="x.Status == 0"><localize key="pageGuardPageHistory_badgeCheckIn">Page Checked In</localize></div>
+                    <div class="umb-badge umb-badge--success umb-badge--xs" ng-show="x.Status == 2"><localize key="pageGuardPageHistory_badgeOverride">Page Override</localize></div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <umb-overlay ng-if="vm.overlay.show"
+                 model="vm.overlay"
+                 view="vm.overlay.view"
+                 icon="icon-shield"
+                 position="right">
+    </umb-overlay>
+</div>

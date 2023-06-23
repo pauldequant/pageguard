@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<language>
+  <area alias="dashboardTabs">
+    <key alias="pageGuardDashboard">Page Guard</key>
+  </area>
+  <area alias="pageGuardDashboard">
+    <key alias="myCheckoutsTitle">My checkouts</key>
+    <key alias="noPagesCheckedOutByMe">You do not have any pages currently checked out</key>
+    <key alias="allCheckoutsTitle">All checkouts by other users</key>
+    <key alias="noPagesCheckedOutByOthers">There are no pages currently checked out by other users</key>
+    <key alias="colPage">Page</key>
+    <key alias="colCheckoutDate">Checkout date</key>
+    <key alias="colActions">Actions</key>
+    <key alias="btnCheckInPage">Check in page</key>
+    <key alias="colCheckedOutFor">Checked out for</key>
+    <key alias="colCheckedOutBy">Checked out by</key>
+    <key alias="btnUnlockPage">Unlock Page</key>
+    <key alias="successmsg">The page has been unlocked successfully</key>
+  </area>
+  <area alias="pageGuardCheckIn">
+    <key alias="intro">If you wish to check in this page, you can do so by clicking the button below.</key>
+    <key alias="btnCheckIn">Check in page</key>
+    <key alias="previewPageText"><![CDATA[If you want to preview this page, please click the '<strong>Preview Page</strong>' button below.]]></key>
+    <key alias="btnPreviewPage">Preview Page</key>
+    <key alias="successmsg">Your page has checked in successfully</key>
+  </area>
+  <area alias="pageGuardCheckOut">
+    <key alias="intro">If you wish to make changes to this page you must first check this page out.</key>
+    <key alias="alert">Proceeding with a page check out will restrict access to this page for all other users.</key>
+    <key alias="previewPageText"><![CDATA[If you want to preview this page without checking out, please click the '<strong>Preview Page</strong>' button below.]]></key>
+    <key alias="btnPreviewPage">Preview Page</key>
+  </area>
+  <area alias="pageGuardNotify">
+    <key alias="intro">
+      <![CDATA[
+      <p>
+        The user '<strong>%0%</strong>' is currently updating this page. This page was checked out at <strong>%1%</strong> on <strong>%2%</strong>.
+      </p>
+      <hr />
+      <p>
+        Clicking on <span class="badge badge-success">Notify</span> will automatically email '<em>%0%</em>' asking them to release this page.
+      </p>
+      <p>
+        If you do not get a response from '<em>%0%</em>' try contacting an admin for help.
+      </p>
+      <hr />
+      <p>
+        <strong>Click on an administrator name below to contact them.</strong>
+      </p>
+      ]]>
+    </key>
+    <key alias="colName">Name</key>
+    <key alias="colEmail">Email</key>
+    <key alias="btnPreviewPage">Preview Page</key>
+  </area>
+  <area alias="pageGuardOverride">
+    <key alias="alert">Overriding the checkout status of this page will remove the page block and allow you/other users to access the current updates made to this page.</key>
+    <key alias="intro">
+      <![CDATA[
+      <p>
+        The user '<strong>%0%</strong>' is currently updating this page.
+      </p>
+      <p>
+        This page was checked out at <strong>%1%</strong> on <strong>%2%</strong> and the last updates to this page were made on <strong>%3%</strong> at <strong>%4%</strong>.
+      </p>
+      ]]>
+    </key>
+    <key alias="historyTitle">Check-in | Check-out History - Last 5 updates</key>
+    <key alias="colName">Name</key>
+    <key alias="colDateTime">Date Time</key>
+    <key alias="colStatus">Status</key>
+    <key alias="badge"><![CDATA[<div class="umb-badge umb-badge--gray umb-badge--xs" ng-show="x.Status == 1">Page Checked Out</div><div class="umb-badge umb-badge--gray umb-badge--xs" ng-show="x.Status == 0">Page Checked In</div><div class="umb-badge umb-badge--success umb-badge--xs" ng-show="x.Status == 2">Page Override</div>]]></key>
+    <key alias="btnPreviewPage">Preview Page</key>
+    <key alias="badgeCheckOut">Page Checked Out</key>
+    <key alias="badgeCheckIn">Page Checked In</key>
+    <key alias="badgeOverride">Page Override</key>
+  </area>
+  <area alias="pageGuardPageHistory">
+    <key alias="title">Check-in | Check-out History - Last 5 updates</key>
+    <key alias="colName">Name</key>
+    <key alias="colDateTime">Date Time</key>
+    <key alias="colStatus">Status</key>
+    <key alias="badgeCheckOut">Page Checked Out</key>
+    <key alias="badgeCheckIn">Page Checked In</key>
+    <key alias="badgeOverride">Page Override</key>
+  </area>
+  <area alias="pageGuardPageStatus">
+    <key alias="intro">You currently have this page checked out, don't forget to check it back in when you're finished.</key>
+    <key alias="btnCheckInPage">Check in page</key>
+    <key alias="successmsg">Your page has checked in successfully</key>
+  </area>
+  <area alias="pageGuardJsController">
+    <key alias="displayOverrideTitle">Page is locked</key>
+    <key alias="displayOverrideDescription">This page is currently checked out. As an admin you can remove this lock.</key>
+    <key alias="displayOverrideSubmitButton">Unlock page</key>
+    <key alias="displayOverrideExitButton">Exit</key>
+    <key alias="displayCheckoutTitle">Check out</key>
+    <key alias="displayCheckoutDescription">Lock this page for editing</key>
+    <key alias="displayCheckoutSubmitButton">Check out</key>
+    <key alias="displayCheckoutExitButton">Exit</key>
+    <key alias="displayNotifyTitle">Page is locked</key>
+    <key alias="displayNotifyDescription">This page is currently in use</key>
+    <key alias="displayNotifySubmitButton">Notify</key>
+    <key alias="displayNotifyExitButton">Cancel</key>
+    <key alias="performNotifySuccess">Your notification email has been sent successfully</key>
+    <key alias="performNotifyError">Your notification email could not be sent</key>
+  </area>
+</language>

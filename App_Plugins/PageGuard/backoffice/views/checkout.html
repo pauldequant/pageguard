@@ -1,0 +1,9 @@
+﻿<div ng-controller="pageguard.checkout.controller as vm" class="pageguard">
+    <p><localize key="pageGuardCheckOut_intro">If you wish to make changes to this page you must first check this page out.</localize></p>
+    <div class="alert alert-info">
+        <localize key="pageGuardCheckOut_alert">Proceeding with a page check out will restrict access to this page for all other users.</localize>
+    </div>
+    <hr />
+    <p><localize key="pageGuardCheckOut_previewPageText">If you want to preview this page without checking out, please click the '<strong>Preview Page</strong>' button below.</localize></p>
+    <a href="/umbraco/preview/?id={{this.nodeId}}" target="_blank" class="btn btn-default"><span class="icon-tv large"></span><localize key="pageGuardCheckOut_btnPreviewPage">Preview Page</localize></a>
+</div>

@@ -1,0 +1,7 @@
+﻿<div ng-controller="pageguard.checkin.controller as vm" class="pageguard checkin">
+    <p><localize key="pageGuardCheckIn_intro">If you wish to check in this page, you can do so by clicking the button below.</localize></p>
+    <p><button ng-click="vm.CheckInPage()" class="btn btn-primary"><localize key="pageGuardCheckIn_btnCheckIn">Check in page</localize></button></p>
+    <hr />
+    <p><localize key="pageGuardCheckIn_previewPageText">If you want to preview this page, please click the '<strong>Preview Page</strong>' button below.</localize></p>
+    <a href="/umbraco/preview/?id={{this.nodeId}}" target="_blank" class="btn btn-default"><span class="icon-tv large"></span><localize key="pageGuardCheckIn_btnPreviewPage">Preview Page</localize></a>
+</div>

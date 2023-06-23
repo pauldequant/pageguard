@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<language>
+  <area alias="dashboardTabs">
+    <key alias="pageGuardDashboard">Page Guard</key>
+  </area>
+  <area alias="pageGuardDashboard">
+    <key alias="myCheckoutsTitle">Mes check-out</key>
+    <key alias="noPagesCheckedOutByMe">Vous n'avez actuellement aucune page en cours de check-out</key>
+    <key alias="allCheckoutsTitle">Tous les check-out par d'autres utilisateurs</key>
+    <key alias="noPagesCheckedOutByOthers">Il n'y a actuellement aucune page en cours de check-out par d'autres utilisateurs</key>
+    <key alias="colPage">Page</key>
+    <key alias="colCheckoutDate">Date de check-out</key>
+    <key alias="colActions">Actions</key>
+    <key alias="btnCheckInPage">Rendre la page</key>
+    <key alias="colCheckedOutFor">Check-out pour</key>
+    <key alias="colCheckedOutBy">Check-out par</key>
+    <key alias="btnUnlockPage">Déverrouiller la page</key>
+    <key alias="successmsg">La page a été déverrouillée avec succès</key>
+  </area>
+  <area alias="pageGuardCheckIn">
+    <key alias="intro">Si vous souhaitez rendre cette page, vous pouvez le faire en cliquant sur le bouton ci-dessous.</key>
+    <key alias="btnCheckIn">Rendre la page</key>
+    <key alias="previewPageText"><![CDATA[Si vous souhaitez prévisualiser cette page, veuillez cliquer sur le bouton '<strong>Prévisualiser la page</strong>' ci-dessous.]]></key>
+    <key alias="btnPreviewPage">Prévisualiser la page</key>
+    <key alias="successmsg">Votre page a été rendue avec succès</key>
+  </area>
+  <area alias="pageGuardCheckOut">
+    <key alias="intro">Si vous souhaitez apporter des modifications à cette page, vous devez d'abord la vérifier.</key>
+    <key alias="alert">La poursuite d'un check-out de la page restreindra l'accès à cette page pour tous les autres utilisateurs.</key>
+    <key alias="previewPageText"><![CDATA[Si vous souhaitez prévisualiser cette page sans la vérifier, veuillez cliquer sur le bouton '<strong>Prévisualiser la page</strong>' ci-dessous.]]></key>
+    <key alias="btnPreviewPage">Prévisualiser la page</key>
+  </area>
+  <area alias="pageGuardNotify">
+    <key alias="intro">
+      <![CDATA[
+      <p>
+        L'utilisateur '<strong>%0%</strong>' met à jour actuellement cette page. Cette page a été vérifiée à <strong>%1%</strong> le <strong>%2%</strong>.
+      </p>
+      <hr />
+      <p>
+        En cliquant sur <span class="badge badge-success">Notifier</span>, un e-mail sera automatiquement envoyé à '<em>%0%</em>' lui demandant de libérer cette page.
+      </p>
+      <p>
+        Si vous n'obtenez pas de réponse de '<em>%0%</em>', essayez de contacter un administrateur pour obtenir de l'aide.
+      </p>
+      <hr />
+      <p>
+        <strong>Cliquez sur le nom d'un administrateur ci-dessous pour le contacter.</strong>
+      </p>
+      ]]>
+    </key>
+    <key alias="colName">Nom</key>
+    <key alias="colEmail">E-mail</key>
+    <key alias="btnPreviewPage">Prévisualiser la page</key>
+  </area>
+  <area alias="pageGuardOverride">
+    <key alias="alert">La suppression du statut de check-out de cette page supprimera le blocage de la page et permettra à vous/d'autres utilisateurs d'accéder aux mises à jour actuelles effectuées sur cette page.</key>
+    <key alias="intro">
+      <![CDATA[
+      <p>
+        L'utilisateur '<strong>%0%</strong>' met à jour actuellement cette page.
+      </p>
+      <p>
+        Cette page a été vérifiée à <strong>%1%</strong> le <strong>%2%</strong> et les dernières mises à jour de cette page ont été effectuées le <strong>%3%</strong> à <strong>%4%</strong>.
+      </p>
+      ]]>
+    </key>
+    <key alias="historyTitle">Historique des Check-in | Check-out - Dernières 5 mises à jour</key>
+    <key alias="colName">Nom</key>
+    <key alias="colDateTime">Date Heure</key>
+    <key alias="colStatus">Statut</key>
+    <key alias="badge"><![CDATA[<div class="umb-badge umb-badge--gray umb-badge--xs" ng-show="x.Status == 1">Page en check-out</div><div class="umb-badge umb-badge--gray umb-badge--xs" ng-show="x.Status == 0">Page rendue</div><div class="umb-badge umb-badge--success umb-badge--xs" ng-show="x.Status == 2">Remplacement de la page</div>]]></key>
+    <key alias="btnPreviewPage">Prévisualiser la page</key>
+    <key alias="badgeCheckOut">Page en check-out</key>
+    <key alias="badgeCheckIn">Page rendue</key>
+    <key alias="badgeOverride">Remplacement de la page</key>
+  </area>
+  <area alias="pageGuardPageHistory">
+    <key alias="title">Historique des Check-in | Check-out - Dernières 5 mises à jour</key>
+    <key alias="colName">Nom</key>
+    <key alias="colDateTime">Date Heure</key>
+    <key alias="colStatus">Statut</key>
+    <key alias="badgeCheckOut">Page en check-out</key>
+    <key alias="badgeCheckIn">Page rendue</key>
+    <key alias="badgeOverride">Remplacement de la page</key>
+  </area>
+  <area alias="pageGuardPageStatus">
+    <key alias="intro">Vous avez actuellement cette page en check-out, n'oubliez pas de la rendre une fois que vous avez terminé.</key>
+    <key alias="btnCheckInPage">Rendre la page</key>
+    <key alias="successmsg">Votre page a été rendue avec succès</key>
+  </area>
+  <area alias="pageGuardJsController">
+    <key alias="displayOverrideTitle">La page est verrouillée</key>
+    <key alias="displayOverrideDescription">
+      Cette page est actuellement en check-out. En tant qu'administrateur, vous pouvez
+
+      supprimer ce verrou.
+    </key>
+    <key alias="displayOverrideSubmitButton">Déverrouiller la page</key>
+    <key alias="displayOverrideExitButton">Sortir</key>
+    <key alias="displayCheckoutTitle">Check-out</key>
+    <key alias="displayCheckoutDescription">Verrouiller cette page pour la modification</key>
+    <key alias="displayCheckoutSubmitButton">Check-out</key>
+    <key alias="displayCheckoutExitButton">Sortir</key>
+    <key alias="displayNotifyTitle">La page est verrouillée</key>
+    <key alias="displayNotifyDescription">Cette page est actuellement utilisée</key>
+    <key alias="displayNotifySubmitButton">Notifier</key>
+    <key alias="displayNotifyExitButton">Annuler</key>
+    <key alias="performNotifySuccess">Votre e-mail de notification a été envoyé avec succès</key>
+    <key alias="performNotifyError">Votre e-mail de notification n'a pas pu être envoyé</key>
+  </area>
+</language>

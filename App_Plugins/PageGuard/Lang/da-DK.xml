@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<language>
+  <area alias="dashboardTabs">
+    <key alias="pageGuardDashboard">Sidevogter</key>
+  </area>
+  <area alias="pageGuardDashboard">
+    <key alias="myCheckoutsTitle">Mine udcheckninger</key>
+    <key alias="noPagesCheckedOutByMe">Du har i øjeblikket ingen sider udchecket</key>
+    <key alias="allCheckoutsTitle">Alle udcheckninger foretaget af andre brugere</key>
+    <key alias="noPagesCheckedOutByOthers">Der er i øjeblikket ingen sider udchecket af andre brugere</key>
+    <key alias="colPage">Side</key>
+    <key alias="colCheckoutDate">Udcheckningsdato</key>
+    <key alias="colActions">Handlinger</key>
+    <key alias="btnCheckInPage">Check ind side</key>
+    <key alias="colCheckedOutFor">Udchecket i</key>
+    <key alias="colCheckedOutBy">Udchecket af</key>
+    <key alias="btnUnlockPage">Lås op side</key>
+    <key alias="successmsg">Siden er blevet låst op succesfuldt</key>
+  </area>
+  <area alias="pageGuardCheckIn">
+    <key alias="intro">Hvis du ønsker at checke denne side ind, kan du gøre det ved at klikke på knappen nedenfor.</key>
+    <key alias="btnCheckIn">Check ind side</key>
+    <key alias="previewPageText"><![CDATA[Hvis du vil forhåndsvise denne side, skal du klikke på knappen '<strong>Forhåndsvis side</strong>' nedenfor.]]></key>
+    <key alias="btnPreviewPage">Forhåndsvis side</key>
+    <key alias="successmsg">Din side er blevet checket ind succesfuldt</key>
+  </area>
+  <area alias="pageGuardCheckOut">
+    <key alias="intro">Hvis du ønsker at foretage ændringer på denne side, skal du først checke siden ud.</key>
+    <key alias="alert">Hvis du fortsætter med at checke siden ud, begrænser du adgangen til denne side for alle andre brugere.</key>
+    <key alias="previewPageText"><![CDATA[Hvis du vil forhåndsvise denne side uden at checke ud, skal du klikke på knappen '<strong>Forhåndsvis side</strong>' nedenfor.]]></key>
+    <key alias="btnPreviewPage">Forhåndsvis side</key>
+  </area>
+  <area alias="pageGuardNotify">
+    <key alias="intro">
+      <![CDATA[
+      <p>
+        Brugeren '<strong>%0%</strong>' opdaterer i øjeblikket denne side. Denne side blev udchecket kl. <strong>%1%</strong> den <strong>%2%</strong>.
+      </p>
+      <hr />
+      <p>
+        Ved at klikke på <span class="badge badge-success">Underret</span> vil der automatisk blive sendt en e-mail til '<em>%0%</em>' og bede dem om at frigive denne side.
+      </p>
+      <p>
+        Hvis du ikke får svar fra '<em>%0%</em>', skal du forsøge at kontakte en administrator for hjælp.
+      </p>
+      <hr />
+      <p>
+        <strong>Klik på et administratornavn nedenfor for at kontakte dem.</strong>
+      </p>
+      ]]>
+    </key>
+    <key alias="colName">Navn</key>
+    <key alias="colEmail">E-mail</key>
+    <key alias="btnPreviewPage">Forhåndsvis side</key>
+  </area>
+  <area alias="pageGuardOverride">
+    <key alias="alert">Ved at tilsidesætte udcheckningsstatus for denne side fjernes blokeringen af siden og giver dig/andre brugere adgang til de aktuelle opdateringer, der er foretaget på denne side.</key>
+    <key alias="intro">
+      <![CDATA[
+      <p>
+        Brugeren '<strong>%0%</strong>' opdaterer i øjeblikket denne side.
+      </p>
+      <p>
+        Denne side blev udchecket kl. <strong>%1%</strong> den <strong>%2%</strong>, og de seneste opdateringer på denne side blev foretaget <strong>%3%</strong> kl. <strong>%4%</strong>.
+      </p>
+      ]]>
+    </key>
+    <key alias="historyTitle">Tjek ind | Tjek ud historik - Sidste 5 opdateringer</key>
+    <key alias="colName">Navn</key>
+    <key alias="colDateTime">Dato Tid</key>
+    <key alias="colStatus">Status</key>
+    <key alias="badge"><![CDATA[<div class="umb-badge umb-badge--gray umb-badge--xs" ng-show="x.Status == 1">Side udchecket</div><div class="umb-badge umb-badge--gray umb-badge--xs" ng-show="x.Status == 0">Side checket ind</div><div class="umb-badge umb-badge--success umb-badge--xs" ng-show="x.Status == 2">Side tilsidesættelse</div>]]></key>
+    <key alias="btnPreviewPage">Forhåndsvis side</key>
+    <key alias="badgeCheckOut">Side udchecket</key>
+    <key alias="badgeCheckIn">Side checket ind</key>
+    <key alias="badgeOverride">Side tilsidesættelse</key>
+  </area>
+  <area alias="pageGuardPageHistory">
+    <key alias="title">Tjek ind | Tjek ud historik - Sidste 5 opdateringer</key>
+    <key alias="colName">Navn</key>
+    <key alias="colDateTime">Dato Tid</key>
+    <key alias="colStatus">Status</key>
+    <key alias="badgeCheckOut">Side udchecket</key>
+    <key alias="badgeCheckIn">Side checket ind</key>
+    <key alias="badgeOverride">Side tilsidesættelse</key>
+  </area>
+  <area alias="pageGuardPageStatus">
+    <key alias="intro">Du har i øjeblikket denne side udchecket. Glem ikke at checke den ind, når du er færdig.</key>
+    <key alias="btnCheckInPage">Check ind side</key>
+    <key alias="successmsg">Din side er checket ind succesfuldt</key>
+  </area>
+  <area alias="pageGuardJsController">
+    <key alias="displayOverrideTitle">Siden er låst</key>
+    <key alias="displayOverrideDescription">Denne side er i øjeblikket udchecket. Som administrator kan du fjerne denne lås.</key>
+    <key alias="displayOverrideSubmitButton">Lås op side</key>
+    <key alias="displayOverrideExitButton">Afslut</key>
+    <key alias="displayCheckoutTitle">Tjek ud</key>
+    <key alias="displayCheckoutDescription">Lås denne side til redigering</key>
+    <key alias="displayCheckoutSubmitButton">Tjek ud</key>
+    <key alias="displayCheckoutExitButton">Afslut</key>
+    <key alias="displayNotifyTitle">Siden er låst</key>
+    <key alias="displayNotifyDescription">Denne side er i øjeblikket i brug</key>
+    <key alias="displayNotifySubmitButton">Underret</key>
+    <key alias="displayNotifyExitButton">Annuller</key>
+    <key alias="performNotifySuccess">Din underretnings-e-mail er blevet sendt succesfuldt</key>
+    <key alias="performNotifyError">Din underretnings-e-mail kunne ikke sendes</key>
+  </area>
+</language>

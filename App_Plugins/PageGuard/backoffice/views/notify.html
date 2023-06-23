@@ -1,0 +1,35 @@
+﻿<div ng-controller="pageguard.notify.controller as vm" class="pageguard">
+    <localize key="pageGuardNotify_intro" tokens="[{{this.latestUsername}},{{this.latestDateTimeRecord}},{{this.latestDateRecord}}]" watch-tokens="true">
+        <p>The user '<strong>{{this.latestUsername}}</strong>' is currently updating this page. This page was checked out at <strong>{{this.latestDateTimeRecord | date: 'HH:mm'}}</strong> on <strong>{{this.latestDateTimeRecord | date: 'dd/MM/yyyy'}}</strong>.</p>
+        <hr />
+        <p>Clicking on <span class="badge badge-success">Notify</span> will automatically email '<em>{{this.latestUsername}}</em>' asking them to release this page.</p>
+        <p>If you do not get a response from '<em>{{this.latestUsername}}</em>' try contacting an admin for help.</p>
+        <hr />
+        <p><strong>Click on an administrator name below to contact them.</strong></p>
+    </localize>
+    <table class="table">
+        <thead>
+        <tr>
+            <td></td>
+            <td><strong><localize key="pageGuardNotify_colName">Name</localize></strong></td>
+            <td><strong><localize key="pageGuardNotify_colEmail">Email</localize></strong></td>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="x in this.list | orderBy: 'UserName'">
+            <td class="icon-col">
+                <div>
+                    <img class="umb-avatar umb-avatar--xs" ng-if="x.Avatar" ng-src="/media/{{x.Avatar}}" ng-srcset="{{imgSrcset}}" alt="User Avatar"/>
+                    <div class="umb-avatar umb-avatar--xs umb-avatar--secondary" ng-if="!x.Avatar">
+                        <span class="initial">{{vm.getNameInitials(x.Username)}}</span>
+                    </div>
+                </div>
+            </td>
+            <td>{{x.UserName}}</td>
+            <td><a href="mailto:{{x.UserEmail}}?subject=Page%20Override%20Required&body={{this.currentUrl}}">{{x.UserEmail}}</a></td>
+        </tr>
+        </tbody>
+    </table>
+    <!--<p>If you want to preview this page whilst it's checked out, please click the '<strong>Preview Page</strong>' button below.</p>-->
+    <a href="/umbraco/preview/?id={{this.nodeId}}" target="_blank" class="btn btn-default"><span class="icon-tv large"></span><localize key="pageGuardNotify_btnPreviewPage">Preview Page</localize></a>
+</div>

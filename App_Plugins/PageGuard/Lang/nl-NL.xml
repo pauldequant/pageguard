@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<language>
+  <area alias="dashboardTabs">
+    <key alias="pageGuardDashboard">Pagewacht</key>
+  </area>
+  <area alias="pageGuardDashboard">
+    <key alias="myCheckoutsTitle">Mijn check-outs</key>
+    <key alias="noPagesCheckedOutByMe">Je hebt op dit moment geen pagina's uitgecheckt</key>
+    <key alias="allCheckoutsTitle">Alle check-outs door andere gebruikers</key>
+    <key alias="noPagesCheckedOutByOthers">Er zijn op dit moment geen pagina's uitgecheckt door andere gebruikers</key>
+    <key alias="colPage">Pagina</key>
+    <key alias="colCheckoutDate">Check-out datum</key>
+    <key alias="colActions">Acties</key>
+    <key alias="btnCheckInPage">Pagina inchecken</key>
+    <key alias="colCheckedOutFor">Uitgecheckt voor</key>
+    <key alias="colCheckedOutBy">Uitgecheckt door</key>
+    <key alias="btnUnlockPage">Pagina ontgrendelen</key>
+    <key alias="successmsg">De pagina is succesvol ontgrendeld</key>
+  </area>
+  <area alias="pageGuardCheckIn">
+    <key alias="intro">Als je deze pagina wilt inchecken, klik dan op de onderstaande knop.</key>
+    <key alias="btnCheckIn">Pagina inchecken</key>
+    <key alias="previewPageText"><![CDATA[Als je deze pagina wilt bekijken, klik dan op de knop '<strong>Paginavoorbeeld</strong>' hieronder.]]></key>
+    <key alias="btnPreviewPage">Paginavoorbeeld</key>
+    <key alias="successmsg">Je pagina is succesvol ingecheckt</key>
+  </area>
+  <area alias="pageGuardCheckOut">
+    <key alias="intro">Als je wijzigingen wilt aanbrengen op deze pagina, moet je deze eerst uitchecken.</key>
+    <key alias="alert">Door verder te gaan met het uitchecken van de pagina wordt de toegang tot deze pagina beperkt voor alle andere gebruikers.</key>
+    <key alias="previewPageText"><![CDATA[Als je deze pagina wilt bekijken zonder uit te checken, klik dan op de knop '<strong>Paginavoorbeeld</strong>' hieronder.]]></key>
+    <key alias="btnPreviewPage">Paginavoorbeeld</key>
+  </area>
+  <area alias="pageGuardNotify">
+    <key alias="intro">
+      <![CDATA[
+      <p>
+        De gebruiker '<strong>%0%</strong>' is op dit moment bezig met het bijwerken van deze pagina. Deze pagina is uitgecheckt op <strong>%1%</strong> om <strong>%2%</strong>.
+      </p>
+      <hr />
+      <p>
+        Door te klikken op <span class="badge badge-success">Melden</span> wordt automatisch een e-mail verzonden naar '<em>%0%</em>' met het verzoek om deze pagina vrij te geven.
+      </p>
+      <p>
+        Als je geen reactie krijgt van '<em>%0%</em>', neem dan contact op met een beheerder voor hulp.
+      </p>
+      <hr />
+      <p>
+        <strong>Klik op de naam van een beheerder hieronder om contact met hen op te nemen.</strong>
+      </p>
+      ]]>
+    </key>
+    <key alias="colName">Naam</key>
+    <key alias="colEmail">E-mail</key>
+    <key alias="btnPreviewPage">Paginavoorbeeld</key>
+  </area>
+  <area alias="pageGuardOverride">
+    <key alias="alert">Het overschrijven van de uitcheckstatus van deze pagina zal het pagablok verwijderen en jou/andere gebruikers toegang geven tot de huidige updates op deze pagina.</key>
+    <key alias="intro">
+      <![CDATA[
+      <p>
+        De gebruiker '<strong>%0%</strong>' is op dit moment bezig met het bijwerken van deze pagina.
+      </p>
+      <p>
+        Deze pagina is uitgecheckt op <strong>%1%</strong> om <strong>%2%</strong> en de laatste updates op deze pagina zijn gemaakt op <strong>%3%</strong> om <strong>%4%</strong>.
+      </p>
+      ]]>
+    </key>
+    <key alias="historyTitle">Check-in | Check-out Geschiedenis - Laatste 5 updates</key>
+    <key alias="colName">Naam</key>
+    <key alias="colDateTime">Datum Tijd</key>
+    <key alias="colStatus">Status</key>
+    <key alias="badge"><![CDATA[<div class="umb-badge umb-badge--gray umb-badge--xs" ng-show="x.Status == 1">Pagina Uitgecheckt</div><div class="umb-badge umb-badge--gray umb-badge--xs" ng-show="x.Status == 0">Pagina Ingecheckt</div><div class="umb-badge umb-badge--success umb-badge--xs" ng-show="x.Status == 2">Pagina Overschrijven</div>]]></key>
+    <key alias="btnPreviewPage">Paginavoorbeeld</key>
+    <key alias="badgeCheckOut">Pagina Uitgecheckt</key>
+    <key alias="badgeCheckIn">Pagina Ingecheckt</key>
+    <key alias="badgeOverride">Pagina Overschrijven</key>
+  </area>
+  <area alias="pageGuardPageHistory">
+    <key alias="title">Check-in | Check-out Geschiedenis - Laatste 5 updates</key>
+    <key alias="colName">Naam</key>
+    <key alias="colDateTime">Datum Tijd</key>
+    <key alias="colStatus">Status</key>
+    <key alias="badgeCheckOut">Pagina Uitgecheckt</key>
+    <key alias="badgeCheckIn">Pagina Ingecheckt</key>
+    <key alias="badgeOverride">Pagina Overschrijven</key>
+  </area>
+  <area alias="pageGuardPageStatus">
+    <key alias="intro">Je hebt op dit moment deze pagina uitgecheckt, vergeet niet om deze in te checken wanneer je klaar bent.</key>
+    <key alias="btnCheckInPage">Pagina inchecken</key>
+    <key alias="successmsg">Je pagina is succesvol ingecheckt</key>
+  </area>
+  <area alias="pageGuardJsController">
+    <key alias="displayOverrideTitle">Pagina is vergrendeld</key>
+    <key alias="displayOverrideDescription">Deze pagina is momenteel uitgecheckt. Als beheerder kun je deze vergrendeling verwijderen.</key>
+    <key alias="displayOverrideSubmitButton">Pagina ontgrendelen</key>
+    <key alias="displayOverrideExitButton">Afsluiten</key>
+    <key alias="displayCheckoutTitle">Uitchecken</key>
+    <key alias="displayCheckoutDescription">Deze pagina vergrendelen voor bewerking</key>
+    <key alias="displayCheckoutSubmitButton">Uitchecken</key>
+    <key alias="displayCheckoutExitButton">Afsluiten</key>
+    <key alias="displayNotifyTitle">Pagina is vergrendeld</key>
+    <key alias="displayNotifyDescription">Deze pagina is momenteel in gebruik</key>
+    <key alias="displayNotifySubmitButton">Melden</key>
+    <key alias="displayNotifyExitButton">Annuleren</key>
+    <key alias="performNotifySuccess">Je meldingsmail is succesvol verzonden</key>
+    <key alias="performNotifyError">Je meldingsmail kon niet worden verzonden</key>
+  </area>
+</language>
