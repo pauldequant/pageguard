@@ -2,17 +2,16 @@
     <PropertyGroup>
         <TargetFramework>net7.0</TargetFramework>
         <ContentTargetFolders>.</ContentTargetFolders>
-        <Product>PageGuard</Product>
         <PackageId>PageGuard</PackageId>
         <Title>PageGuard</Title>
         <Description>Page Guard: An Umbraco package that implements a check in  / checkout system for page content.</Description>
-        <Product>...</Product>
+        <Product>Page Guard: Umbraco Package</Product>
         <PackageTags>umbraco plugin package;umbraco-marketplace</PackageTags>
         <RootNamespace>PageGuard</RootNamespace>
-        <Authors>pauldequant,jonroberts24</Authors>
+        <Authors>Paul de Quant, Jon Roberts</Authors>
         <PackageReadmeFile>readme.md</PackageReadmeFile>
         <PackageProjectUrl>https://github.com/pauldequant/pageguard</PackageProjectUrl>
-        <Version>1.0.3</Version>
+        <Version>1.0.4</Version>
     </PropertyGroup>
 
     <ItemGroup>
