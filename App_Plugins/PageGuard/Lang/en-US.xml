@@ -38,10 +38,10 @@
       </p>
       <hr />
       <p>
-        Clicking on <span class="badge badge-success">Notify</span> will automatically email '<em>%0%</em>' asking them to release this page.
+        Clicking on <span class="badge badge-success">Notify</span> will automatically email '<em>%3%</em>' asking them to release this page.
       </p>
       <p>
-        If you do not get a response from '<em>%0%</em>' try contacting an admin for help.
+        If you do not get a response from '<em>%4%</em>' try contacting an admin for help.
       </p>
       <hr />
       <p>

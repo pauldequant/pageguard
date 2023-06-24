@@ -1,48 +1,65 @@
 {
   "$schema": "https://marketplace.umbraco.com/umbraco-marketplace-schema.json",
-  "AddOnPackagesRequiredForUmbracoCloud": [],
-  "AlternatePackageNames": [],
+  "AlternatePackageNames": [ "Contentment" ],
   "AuthorDetails": {
-    "Name": "Paul de Quant, Jon Roberts",
-    "Description": "",
-    "Url": "",
-    "ImageUrl": "",
-    "Contributors": [
-      {
-        "Name": "",
-        "Url": ""
-      }
-    ],
-    "SyncContributorsFromRepository": "false"
+    "Name": "Lee Kelleher",
+    "Description": "A long time Umbraco collaborator, 12x MVP",
+    "Url": "https://leekelleher.com/umbraco/",
+    "ImageUrl": "https://github.com/leekelleher.png",
+    "Contributors": [],
+    "SyncContributorsFromRepository": false
   },
   "Category": "Editor Tools",
-  "Description": "Page Guard allows users to easily check out specific pages for exclusive editing rights. By checking out a page, you prevent others from making simultaneous changes, reducing the risk of content conflicts and data loss. Once you've made the necessary updates, simply check the page back in to make it available for others to edit.",
-  "DiscussionForumUrl": "",
-  "DocumentationUrl": "",
+  "Description": "Contentment, a collection of components for Umbraco.",
+  "DiscussionForumUrl": "https://github.com/leekelleher/umbraco-contentment/discussions",
+  "DocumentationUrl": "https://github.com/leekelleher/umbraco-contentment/tree/develop/docs",
+  "IssueTrackerUrl": "https://github.com/leekelleher/umbraco-contentment/issues",
   "LicenseTypes": [ "Free" ],
-  "IssueTrackerUrl": "",
-  "IsSubPackageOf": "",
   "PackageType": "Package",
   "PackagesByAuthor": [],
-  "RelatedPackages": [
-    {
-      "PackageId": "",
-      "Description": ""
-    }
-  ],
+  "RelatedPackages": [],
   "Screenshots": [
     {
-      "ImageUrl": "",
-      "Caption": ""
-    }
-  ],
-  "Tags": [],
-  "Title": "Page Guard",
-  "VersionSpecificPackageIds": [
+      "ImageUrl": "https://raw.githubusercontent.com/leekelleher/umbraco-contentment/develop/docs/editors/data-list--configuration-editor-02.png",
+      "Caption": "Configuration Editor for Data List - available data sources"
+    },
     {
-      "UmbracoMajorVersion": 11,
-      "PackageId": ""
+      "ImageUrl": "https://raw.githubusercontent.com/leekelleher/umbraco-contentment/develop/docs/editors/data-list--configuration-editor-04.png",
+      "Caption": "Configuration Editor for Data List - available list editors"
+    },
+    {
+      "ImageUrl": "https://raw.githubusercontent.com/leekelleher/umbraco-contentment/develop/docs/editors/code-editor--property-editor-01.png",
+      "Caption": "Code Editor property-editor"
+    },
+    {
+      "ImageUrl": "https://raw.githubusercontent.com/leekelleher/umbraco-contentment/develop/docs/editors/content-blocks--property-editor-05.png",
+      "Caption": "Content Blocks - content block action menu"
+    },
+    {
+      "ImageUrl": "https://raw.githubusercontent.com/leekelleher/umbraco-contentment/develop/docs/editors/editor-notes--configuration-editor.png",
+      "Caption": "Editor Notes - Configuration Editor"
+    },
+    {
+      "ImageUrl": "https://raw.githubusercontent.com/leekelleher/umbraco-contentment/develop/docs/editors/social-links--configuration-editor-01.png",
+      "Caption": "Social Links - Configuration Editor"
+    },
+    {
+      "ImageUrl": "https://raw.githubusercontent.com/leekelleher/umbraco-contentment/develop/docs/editors/social-links--configuration-editor-02.png",
+      "Caption": "Social Links - add social network configuration"
+    },
+    {
+      "ImageUrl": "https://raw.githubusercontent.com/leekelleher/umbraco-contentment/develop/docs/editors/social-links--property-editor-02.png",
+      "Caption": "Social Links - edit social profile details"
     }
   ],
-  "VideoUrl": ""
+  "Tags": [
+    "backoffice",
+    "check in / check out",
+    "page lock",
+    "page access control",
+    "editorial experience",
+    "property editor"
+  ],
+  "Title": "Page Guard",
+  "VideoUrl": "https://www.youtube.com/embed/alhbwyQkU1E"
 }

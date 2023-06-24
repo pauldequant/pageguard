@@ -38,10 +38,10 @@
       </p>
       <hr />
       <p>
-        Ved at klikke på <span class="badge badge-success">Underret</span> vil der automatisk blive sendt en e-mail til '<em>%0%</em>' og bede dem om at frigive denne side.
+        Ved at klikke på <span class="badge badge-success">Underret</span> vil der automatisk blive sendt en e-mail til '<em>%3%</em>' og bede dem om at frigive denne side.
       </p>
       <p>
-        Hvis du ikke får svar fra '<em>%0%</em>', skal du forsøge at kontakte en administrator for hjælp.
+        Hvis du ikke får svar fra '<em>%4%</em>', skal du forsøge at kontakte en administrator for hjælp.
       </p>
       <hr />
       <p>

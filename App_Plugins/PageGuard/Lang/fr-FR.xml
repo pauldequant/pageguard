@@ -38,10 +38,10 @@
       </p>
       <hr />
       <p>
-        En cliquant sur <span class="badge badge-success">Notifier</span>, un e-mail sera automatiquement envoyé à '<em>%0%</em>' lui demandant de libérer cette page.
+        En cliquant sur <span class="badge badge-success">Notifier</span>, un e-mail sera automatiquement envoyé à '<em>%3%</em>' lui demandant de libérer cette page.
       </p>
       <p>
-        Si vous n'obtenez pas de réponse de '<em>%0%</em>', essayez de contacter un administrateur pour obtenir de l'aide.
+        Si vous n'obtenez pas de réponse de '<em>%4%</em>', essayez de contacter un administrateur pour obtenir de l'aide.
       </p>
       <hr />
       <p>
