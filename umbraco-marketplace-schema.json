@@ -3,7 +3,6 @@
   "AlternatePackageNames": [ "PageGuard" ],
   "AuthorDetails": {
     "Name": "Paul de Quant / Jon Roberts",
-    "Description": "A long time Umbraco collaborator, 12x MVP",
     "Contributors": [],
     "SyncContributorsFromRepository": false
   },
