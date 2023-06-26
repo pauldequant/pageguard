@@ -44,7 +44,7 @@
                             }
                             else {
                                 /// CHECK OUT
-                                if ($routeParams.create !== "create") {
+                                if ($routeParams.create !== "true") {
                                     vm.DisplayCheckout(); /// SHOW CHECKOUT FOR EDITING OPTIONS
                                 }
                             }

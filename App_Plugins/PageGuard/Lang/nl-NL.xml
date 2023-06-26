@@ -113,4 +113,7 @@
     <key alias="line3">Als u klaar bent met deze pagina, log dan in op het Umbraco CMS en check de pagina in zodat deze gebruiker er toegang toe heeft.</key>
     <key alias="signoff">Bedankt</key>
   </area>
+  <area alias="pageGuardMenu">
+    <key alias="checkInPage">Check in Page</key>
+  </area>
 </language>

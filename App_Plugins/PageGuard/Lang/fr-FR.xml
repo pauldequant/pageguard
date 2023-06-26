@@ -117,5 +117,7 @@
     <key alias="line3">Si vous avez terminé avec cette page, veuillez vous connecter au CMS Umbraco et déverrouiller la page afin que cet utilisateur puisse y accéder.</key>
     <key alias="signoff">Merci</key>
   </area>
-
+  <area alias="pageGuardMenu">
+    <key alias="checkInPage">Pagina inchecken</key>
+  </area>
 </language>

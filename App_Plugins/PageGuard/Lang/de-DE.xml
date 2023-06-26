@@ -113,4 +113,7 @@
     <key alias="line3">Wenn Sie mit dieser Seite fertig sind, melden Sie sich bitte im Umbraco CMS an und geben Sie die Seite frei, damit dieser Benutzer darauf zugreifen kann.</key>
     <key alias="signoff">Vielen Dank</key>
   </area>
+  <area alias="pageGuardMenu">
+    <key alias="checkInPage">Seite einchecken</key>
+  </area>
 </language>

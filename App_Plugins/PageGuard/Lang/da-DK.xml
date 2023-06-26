@@ -113,4 +113,7 @@
     <key alias="line3">Hvis du er færdig med denne side, skal du logge ind på Umbraco CMS og checke siden ind, så denne bruger kan få adgang til den.</key>
     <key alias="signoff">Tak</key>
   </area>
+  <area alias="pageGuardMenu">
+    <key alias="checkInPage">Check ind på side</key>
+  </area>
 </language>

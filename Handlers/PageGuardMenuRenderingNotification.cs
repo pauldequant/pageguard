@@ -11,6 +11,7 @@ namespace PageGuard.Handlers
     using Umbraco.Cms.Infrastructure.Scoping;
     using Umbraco.Cms.Core.Mail;
     using Umbraco.Cms.Core.Web;
+    using Umbraco.Extensions;
 
     public class PageGuardMenuRenderingNotification : INotificationHandler<MenuRenderingNotification>
     {
@@ -48,7 +49,7 @@ namespace PageGuard.Handlers
 
                 if (nodeItem != null)
                 {
-                    var m = new MenuItem("checkInPage", "Check in Page");
+                    var m = new MenuItem("checkInPage", _localizedTextService.Localize("pageGuardMenu", "checkInPage"));
                     m.Icon = "icon icon-traffic";
                     m.SeparatorBefore = true;
                     m.AdditionalData.Add("actionView", "/App_Plugins/PageGuard/backoffice/views/checkin.html");
