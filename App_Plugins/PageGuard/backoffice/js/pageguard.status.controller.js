@@ -29,7 +29,7 @@
                     pageguardResource.GetLatestPageStatus(nodeId).then(function (latestStatus) {
                         $scope.latestStatus = latestStatus;
 
-                        if ($scope.showPageGuardPrompt === "false") {
+                        if ($scope.showPageGuardPrompt === false) {
                             $scope.showAlert = true;
                         }
                     });
@@ -46,18 +46,19 @@
                 pageguardResource.CheckinPage(nodeId, $scope.currentUserId).then(function (checkin) {
                     $scope.checkinSuccess = checkin;
 
-                    if ($scope.checkinSuccess === "true") {
-
-                        notificationsService.remove(0);
+                    if ($scope.checkinSuccess === true) {
 
                         var message = "Your page has checked in successfully";
                         localizationService.localize("pageGuardPageStatus_successmsg").then(function (value) {
                             message = value;
+
+                            notificationsService.remove(0);
+                            notificationsService.success(message);
+
+                            location.reload();
                         });
 
-                        notificationsService.success(message);
 
-                        location.reload();
                     }
                 });
             });

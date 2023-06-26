@@ -31,16 +31,17 @@
                 pageguardResource.OverridePage(nodeId, $scope.currentUserId).then(function (unlock) {
                     $scope.unlockSuccess = unlock;
 
-                    if ($scope.unlockSuccess === "true") {
+                    if ($scope.unlockSuccess === true) {
 
-                        notificationsService.remove(0);
+                       
 
                         var message = "The page has been unlocked successfully";
                         localizationService.localize("pageGuardDashboard_successmsg").then(function (value) {
                             message = value;
-                        });
 
-                        notificationsService.success(message);
+                            notificationsService.remove(0);
+                            notificationsService.success(message);
+                        });
 
                         pageguardResource.LoadEveryonesCheckouts($scope.currentUserId).then(function (data) {
                             $scope.everyone = data;
@@ -59,7 +60,7 @@
                 pageguardResource.CheckinPage(nodeId, $scope.currentUserId).then(function (checkin) {
                     $scope.checkinSuccess = checkin;
 
-                    if ($scope.checkinSuccess === "true") {
+                    if ($scope.checkinSuccess === true) {
                         notificationsService.remove(0);
                         notificationsService.success("Your page has checked in successfully");
 
