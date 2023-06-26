@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-using Umbraco.Cms.Core.Models.PublishedContent;
-using Umbraco.Extensions;
+﻿using Microsoft.Extensions.Configuration;
 
 namespace PageGuard.Controllers
 {
@@ -21,8 +19,9 @@ namespace PageGuard.Controllers
     using Umbraco.Cms.Core.Services;
     using Umbraco.Cms.Web.Common.Attributes;
     using Umbraco.Cms.Core.Web;
-    using Umbraco.Cms.Core.Routing;
-    using Umbraco.Cms.Web.Common.UmbracoContext;
+    using System.Collections.Generic;
+    using Umbraco.Cms.Core.Models.PublishedContent;
+    using Umbraco.Extensions;
 
     [PluginController("PageGuardApi")]
     [IsBackOffice]
@@ -34,8 +33,10 @@ namespace PageGuard.Controllers
         private readonly ILogger<PageGuardApiController> _logger;
         private readonly IUmbracoContextAccessor _umbracoContextAccessor;
         private readonly ILocalizationService _localizationService;
+        private readonly ILocalizedTextService _localizedTextService;
+        private readonly IConfiguration _configuration;
 
-        public PageGuardApiController(IScopeProvider scopeProvider, ILogger<PageGuardApiController> logger, IUserService userService, IEmailSender emailSender, IUmbracoContextAccessor umbracoContextAccessor, ILocalizationService localizationService)
+        public PageGuardApiController(IScopeProvider scopeProvider, ILogger<PageGuardApiController> logger, IUserService userService, IEmailSender emailSender, IUmbracoContextAccessor umbracoContextAccessor, ILocalizationService localizationService, ILocalizedTextService localizedTextService, IConfiguration configuration)
         {
             _scopeProvider = scopeProvider;
             _userService = userService;
@@ -43,6 +44,8 @@ namespace PageGuard.Controllers
             _logger = logger;
             _umbracoContextAccessor = umbracoContextAccessor;
             _localizationService = localizationService;
+            _localizedTextService = localizedTextService;
+            _configuration = configuration;
         }
 
         [HttpPost]
@@ -83,26 +86,31 @@ namespace PageGuard.Controllers
 
                 if (userAccount != null)
                 {
-                    string sender = _localizationService.GetDictionaryItemByKey("PageGuardDefaultSender")?.ToString();
+                    string sender = _configuration["Umbraco:CMS:Global:Smtp:From"] ?? string.Empty;
                     string recipient = ownersEmail;
-                    string subject = _localizationService.GetDictionaryItemByKey("PageGuardNotifySubject")?.ToString();
-                    
+                    string subject = _localizedTextService.Localize("pageGuardEmails", "notifySubject");
+
+                    if (string.IsNullOrEmpty(sender))
+                    {
+                        return false;
+                    }
+
                     StringBuilder stringBuilder = new StringBuilder();
 
                     _umbracoContextAccessor.TryGetUmbracoContext(out IUmbracoContext umbracoContext);
-                    string url = umbracoContext?.Content?.GetById(nodeId)?.Url(null,UrlMode.Absolute);
-                   
-                    stringBuilder.AppendFormat("Hello {0},", ownersName);
+                    string url = umbracoContext?.Content?.GetById(nodeId)?.Url(null, UrlMode.Absolute);
+
+                    stringBuilder.AppendFormat(_localizedTextService.Localize("pageGuardEmails", "greeting") + " {0},<br/>", ownersName);
                     stringBuilder.AppendLine();
-                    stringBuilder.AppendLine("You currently have the following page checked out: ");
+                    stringBuilder.AppendLine(_localizedTextService.Localize("pageGuardEmails", "line1") + "<br/>");
                     stringBuilder.AppendLine();
                     stringBuilder.AppendFormat("{0},", url);
                     stringBuilder.AppendLine();
-                    stringBuilder.AppendFormat("The user '{0}' has requested access to this page.", userAccount.Name);
+                    stringBuilder.AppendFormat(_localizedTextService.Localize("pageGuardEmails", "line2") + "<br/>", userAccount.Name);
                     stringBuilder.AppendLine();
-                    stringBuilder.AppendLine("If you are finished with this page, please login to the Umbraco CMS and check in the page so this user can access it.");
+                    stringBuilder.AppendLine(_localizedTextService.Localize("pageGuardEmails", "line3") + "<br/>");
                     stringBuilder.AppendLine();
-                    stringBuilder.AppendLine("Thanks");
+                    stringBuilder.AppendLine(_localizedTextService.Localize("pageGuardEmails", "signoff") + "<br/>");
 
                     string body = stringBuilder.ToString();
 
@@ -204,7 +212,7 @@ namespace PageGuard.Controllers
                 .Where("[UserId] <> @0", userId);
 
             var sqlResults = scope.Database.Fetch<AllCheckoutsModel>(sqlQuery);
-            
+
             scope.Complete();
 
             return sqlResults.ToList();

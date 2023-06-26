@@ -105,4 +105,12 @@
     <key alias="performNotifySuccess">Your notification email has been sent successfully</key>
     <key alias="performNotifyError">Your notification email could not be sent</key>
   </area>
+  <area alias="pageGuardEmails">
+    <key alias="notifySubject">Page Guard: CMS Page Unlock Required</key>
+    <key alias="greeting">Hello</key>
+    <key alias="line1">You currently have the following page checked out:</key>
+    <key alias="line2">The user '{0}' has requested access to this page.</key>
+    <key alias="line3">If you are finished with this page, please login to the Umbraco CMS and check in the page so this user can access it.</key>
+    <key alias="signoff">Thanks</key>
+  </area>
 </language>

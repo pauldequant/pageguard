@@ -1,4 +1,6 @@
-﻿namespace PageGuard.Handlers
+﻿using Microsoft.Extensions.Configuration;
+
+namespace PageGuard.Handlers
 {
     using Umbraco.Cms.Core.Notifications;
     using Umbraco.Cms.Core.Events;
@@ -19,8 +21,10 @@
         private readonly IEmailSender _emailSender;
         private readonly IUmbracoContextAccessor _umbracoContextAccessor;
         private readonly ILocalizationService _localizationService;
+        private readonly ILocalizedTextService _localizedTextService;
+        private readonly IConfiguration _configuration;
 
-        public PageGuardMenuRenderingNotification(IScopeProvider scopeProvider, ILogger<PageGuardApiController> logger, IContentService contentService, IUserService userService, IEmailSender emailSender, IUmbracoContextAccessor umbracoContextAccessor, ILocalizationService localizationService)
+        public PageGuardMenuRenderingNotification(IScopeProvider scopeProvider, ILogger<PageGuardApiController> logger, IContentService contentService, IUserService userService, IEmailSender emailSender, IUmbracoContextAccessor umbracoContextAccessor, ILocalizationService localizationService, ILocalizedTextService localizedTextService, IConfiguration configuration)
         {
             _scopeProvider = scopeProvider;
             _logger = logger;
@@ -29,6 +33,8 @@
             _emailSender = emailSender;
             _umbracoContextAccessor = umbracoContextAccessor;
             _localizationService = localizationService;
+            _localizedTextService = localizedTextService;
+            _configuration = configuration;
         }
 
         public void Handle(MenuRenderingNotification notification)
@@ -47,7 +53,7 @@
                     m.SeparatorBefore = true;
                     m.AdditionalData.Add("actionView", "/App_Plugins/PageGuard/backoffice/views/checkin.html");
 
-                    PageGuardApiController pageGuardController = new PageGuardApiController(_scopeProvider, _logger, _userService, _emailSender, _umbracoContextAccessor, _localizationService);
+                    PageGuardApiController pageGuardController = new PageGuardApiController(_scopeProvider, _logger, _userService, _emailSender, _umbracoContextAccessor, _localizationService, _localizedTextService, _configuration);
 
                     if (convertNodeId)
                     {

@@ -11,7 +11,7 @@
         <Authors>Paul de Quant, Jon Roberts</Authors>
         <PackageReadmeFile>readme.md</PackageReadmeFile>
         <PackageProjectUrl>https://github.com/pauldequant/pageguard</PackageProjectUrl>
-        <Version>1.0.4</Version>
+        <Version>1.0.5</Version>
     </PropertyGroup>
 
     <ItemGroup>

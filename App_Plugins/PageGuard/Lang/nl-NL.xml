@@ -105,4 +105,12 @@
     <key alias="performNotifySuccess">Je meldingsmail is succesvol verzonden</key>
     <key alias="performNotifyError">Je meldingsmail kon niet worden verzonden</key>
   </area>
+  <area alias="pageGuardEmails">
+    <key alias="notifySubject">Page Guard: CMS Pagina Ontgrendeling Vereist</key>
+    <key alias="greeting">Hallo</key>
+    <key alias="line1">U heeft momenteel de volgende pagina uitgecheckt:</key>
+    <key alias="line2">De gebruiker '{0}' heeft toegang tot deze pagina aangevraagd.</key>
+    <key alias="line3">Als u klaar bent met deze pagina, log dan in op het Umbraco CMS en check de pagina in zodat deze gebruiker er toegang toe heeft.</key>
+    <key alias="signoff">Bedankt</key>
+  </area>
 </language>

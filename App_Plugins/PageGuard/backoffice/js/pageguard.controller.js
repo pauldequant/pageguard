@@ -219,18 +219,23 @@
                     pageguardResource.Notify(nodeId, $scope.pageOwnerId, $scope.currentUserId).then(function (mailstatus) {
                         $scope.mailsent = mailstatus;
 
-                        if ($scope.mailsent === "true") {
-                            notificationsService.remove(0);
+                        var successPromise = localizationService.localize('pageGuardJsController_performNotifySuccess');
+                        var failurePromise = localizationService.localize('pageGuardJsController_performNotifyError');
 
-                            var success = localizationService.localize('pageGuardJsController_performNotifySuccess').then(function (value) { return value; });
+                        var promises = [successPromise, failurePromise];
 
-                            notificationsService.success(success);
-                        } else {
-                            notificationsService.remove(0);
+                        $q.all(promises).then(function (results) {
+                            var successLabel = results[0];
+                            var failureLabel = results[1];
 
-                            var error = localizationService.localize('pageGuardJsController_performNotifyError').then(function (value) { return value; });
-                            notificationsService.error(error);
-                        }
+                            if ($scope.mailsent === true) {
+                                notificationsService.remove(0);
+                                notificationsService.success(successLabel);
+                            } else {
+                                notificationsService.remove(0);
+                                notificationsService.error(failureLabel);
+                            }
+                        });
                     });
                 });
             });

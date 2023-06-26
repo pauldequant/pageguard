@@ -105,4 +105,12 @@
     <key alias="performNotifySuccess">Din underretnings-e-mail er blevet sendt succesfuldt</key>
     <key alias="performNotifyError">Din underretnings-e-mail kunne ikke sendes</key>
   </area>
+  <area alias="pageGuardEmails">
+    <key alias="notifySubject">Page Guard: CMS Sidekrævet oplåsning</key>
+    <key alias="greeting">Hej</key>
+    <key alias="line1">Du har i øjeblikket følgende side checket ud:</key>
+    <key alias="line2">Brugeren '{0}' har anmodet om adgang til denne side.</key>
+    <key alias="line3">Hvis du er færdig med denne side, skal du logge ind på Umbraco CMS og checke siden ind, så denne bruger kan få adgang til den.</key>
+    <key alias="signoff">Tak</key>
+  </area>
 </language>

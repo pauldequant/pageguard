@@ -105,4 +105,12 @@
     <key alias="performNotifySuccess">Deine Benachrichtigungs-E-Mail wurde erfolgreich gesendet</key>
     <key alias="performNotifyError">Deine Benachrichtigungs-E-Mail konnte nicht gesendet werden</key>
   </area>
+  <area alias="pageGuardEmails">
+    <key alias="notifySubject">Page Guard: CMS Seitensperre erforderlich</key>
+    <key alias="greeting">Hallo</key>
+    <key alias="line1">Sie haben aktuell folgende Seite gesperrt:</key>
+    <key alias="line2">Der Benutzer '{0}' hat um Zugriff auf diese Seite gebeten.</key>
+    <key alias="line3">Wenn Sie mit dieser Seite fertig sind, melden Sie sich bitte im Umbraco CMS an und geben Sie die Seite frei, damit dieser Benutzer darauf zugreifen kann.</key>
+    <key alias="signoff">Vielen Dank</key>
+  </area>
 </language>

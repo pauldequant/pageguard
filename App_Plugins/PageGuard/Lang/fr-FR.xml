@@ -109,4 +109,13 @@
     <key alias="performNotifySuccess">Votre e-mail de notification a été envoyé avec succès</key>
     <key alias="performNotifyError">Votre e-mail de notification n'a pas pu être envoyé</key>
   </area>
+  <area alias="pageGuardEmails">
+    <key alias="notifySubject">Page Guard : Déverrouillage requis pour la page CMS</key>
+    <key alias="greeting">Bonjour</key>
+    <key alias="line1">Vous avez actuellement la page suivante verrouillée :</key>
+    <key alias="line2">L'utilisateur '{0}' a demandé l'accès à cette page.</key>
+    <key alias="line3">Si vous avez terminé avec cette page, veuillez vous connecter au CMS Umbraco et déverrouiller la page afin que cet utilisateur puisse y accéder.</key>
+    <key alias="signoff">Merci</key>
+  </area>
+
 </language>
